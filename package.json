@@ -7,10 +7,15 @@
     "build": "vue-cli-service build",
     "lint": "vue-cli-service lint",
     "cloud:serve": "cross-env PROJECT_ENV=cloud npm run serve",
-    "paas:serve": "cross-env PROJECT_ENV=paas npm run serve"
+    "cloud:build": "cross-env PROJECT_ENV=cloud npm run build",
+    "paas:serve": "cross-env PROJECT_ENV=paas npm run serve",
+    "paas:build": "cross-env PROJECT_ENV=paas npm run build",
+    "karrot:serve": "karrot npm run serve",
+    "karrot:build": "karrot npm run build"
   },
   "dependencies": {
     "core-js": "^3.6.5",
+    "karrot": "^1.0.0",
     "vue": "^2.6.11",
     "vue-router": "^3.2.0",
     "vuex": "^3.4.0"

@@ -3,11 +3,11 @@
  * @Autor: Lizijie
  * @Date: 2020-07-25 15:14:53
  * @LastEditors: Lizijie
- * @LastEditTime: 2020-07-25 17:33:02
+ * @LastEditTime: 2020-08-24 17:12:33
 --> 
 <template>
   <div class="home">
-    <karrotInject package="navComp">
+    <karrotInject module="navComp">
       <img alt="Vue logo" src="../assets/logo.png" />
       <HelloWorld msg="Welcome to Your Vue.js App" />
     </karrotInject>
@@ -27,7 +27,9 @@ export default {
   },
   methods: {
     onClick() {
-      Karrot.injectJs('clickHandle')
+      Karrot.injectJs('clickHandle', () => {
+        alert('普通')
+      })
     }
   }
 };
